@@ -11,7 +11,7 @@ import SwiftUI
 struct RyMUnIverseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeWireFrame().view
         }
     }
 }
