@@ -16,7 +16,8 @@ class BaseApiClient: NetworkProtocol {
     }
     
     // MARK: Characters
-    func getModelByAPI<T>(relativePath: String, type: T.Type) -> AnyPublisher<T, BaseError> where T : Decodable {
+    func getModelByAPI<T>(relativePath: String, 
+                          type: T.Type) -> AnyPublisher<T, BaseError> where T : Decodable {
         guard let url = URL(string: relativePath) else {
             return Fail(error: BaseError.failedURL).eraseToAnyPublisher()
         }

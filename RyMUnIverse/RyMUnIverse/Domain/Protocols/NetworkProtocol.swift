@@ -11,5 +11,4 @@ import Combine
 protocol NetworkProtocol {
     func getModelByAPI<T: Decodable>(relativePath: String,
                                      type: T.Type) -> AnyPublisher<T, BaseError>
-
 }
