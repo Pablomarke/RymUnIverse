@@ -36,6 +36,7 @@ class BaseApiClient: NetworkProtocol {
             .mapError { error in
                 BaseError.generic
             }
+            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
 }

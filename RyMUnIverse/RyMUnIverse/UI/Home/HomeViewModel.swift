@@ -21,8 +21,7 @@ final class HomeViewModel: ObservableObject {
     // MARK: - Public Method -
     func createCharacters() {
         dataManager.createCharacters()
-            .sink { [weak self] completion in
-                print(completion)
+            .sink { completion in
                 if case let .failure(error) = completion {
                     print("Error \(error)")
                 }

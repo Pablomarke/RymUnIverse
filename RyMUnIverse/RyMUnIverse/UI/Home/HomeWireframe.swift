@@ -13,7 +13,7 @@ final class HomeWireFrame {
         let apiClient: HomeApiClient = HomeApiClient()
         let dataManager: HomeDataManager = createDataManager(apiClient: apiClient)
         let viewModel: HomeViewModel = createViewModel(with: dataManager)
-        var view = HomeView(viewModel: viewModel)
+        let view = HomeView(viewModel: viewModel)
         
         return AnyView(view)
     }

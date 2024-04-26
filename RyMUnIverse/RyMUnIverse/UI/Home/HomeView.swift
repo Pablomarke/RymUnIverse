@@ -19,13 +19,13 @@ struct HomeView: View {
     var body: some View {
         List(content: {
             ForEach(viewModel.charactersForView) { data in
-                    Text(data.name)
-                }
+                Text(data.name)
+            }
         })
         // MARK: - Lifecycle -
-            .onAppear {
-                viewModel.createCharacters()
-            }
+        .onAppear {
+            viewModel.createCharacters()
+        }
     }
 }
 

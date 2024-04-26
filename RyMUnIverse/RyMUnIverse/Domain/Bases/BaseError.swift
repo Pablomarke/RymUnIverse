@@ -15,7 +15,6 @@ enum BaseError: Error {
     case noURl
     case invalidResponse
     
-    
     func description() -> String {
         switch self {
             case .generic:
