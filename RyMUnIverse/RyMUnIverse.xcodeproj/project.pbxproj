@@ -11,6 +11,8 @@
 		39103E012BDBA76D00A301C8 /* AllCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39103E002BDBA76D00A301C8 /* AllCharacters.swift */; };
 		39103E032BDBA78700A301C8 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39103E022BDBA78700A301C8 /* Character.swift */; };
 		39103E052BDBA86F00A301C8 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39103E042BDBA86F00A301C8 /* Endpoint.swift */; };
+		39103E082BDBAF4200A301C8 /* BaseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39103E072BDBAF4200A301C8 /* BaseApiClient.swift */; };
+		39103E0A2BDBB14400A301C8 /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39103E092BDBB14400A301C8 /* BaseError.swift */; };
 		394925212BDA88C000030E22 /* RyMUnIverseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394925202BDA88BF00030E22 /* RyMUnIverseApp.swift */; };
 		394925252BDA88C100030E22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 394925242BDA88C100030E22 /* Assets.xcassets */; };
 		394925282BDA88C100030E22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 394925272BDA88C100030E22 /* Preview Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		39103E002BDBA76D00A301C8 /* AllCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCharacters.swift; sourceTree = "<group>"; };
 		39103E022BDBA78700A301C8 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		39103E042BDBA86F00A301C8 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		39103E072BDBAF4200A301C8 /* BaseApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiClient.swift; sourceTree = "<group>"; };
+		39103E092BDBB14400A301C8 /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 		3949251D2BDA88BF00030E22 /* RyMUnIverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RyMUnIverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		394925202BDA88BF00030E22 /* RyMUnIverseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyMUnIverseApp.swift; sourceTree = "<group>"; };
 		394925242BDA88C100030E22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 				39103E042BDBA86F00A301C8 /* Endpoint.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		39103E062BDBAF2A00A301C8 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				39103E072BDBAF4200A301C8 /* BaseApiClient.swift */,
+				39103E092BDBB14400A301C8 /* BaseError.swift */,
+			);
+			path = Bases;
 			sourceTree = "<group>";
 		};
 		394925142BDA88BF00030E22 = {
@@ -174,6 +187,7 @@
 		3949254D2BDA88FC00030E22 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				39103E062BDBAF2A00A301C8 /* Bases */,
 				39103DFD2BDBA66D00A301C8 /* Models */,
 			);
 			path = Domain;
@@ -331,10 +345,12 @@
 			files = (
 				394925582BDA899F00030E22 /* HomeDataManager.swift in Sources */,
 				394925562BDA898800030E22 /* HomeApiClient.swift in Sources */,
+				39103E082BDBAF4200A301C8 /* BaseApiClient.swift in Sources */,
 				394925212BDA88C000030E22 /* RyMUnIverseApp.swift in Sources */,
 				394925532BDA896A00030E22 /* HomeViewModel.swift in Sources */,
 				39103E052BDBA86F00A301C8 /* Endpoint.swift in Sources */,
 				39103E032BDBA78700A301C8 /* Character.swift in Sources */,
+				39103E0A2BDBB14400A301C8 /* BaseError.swift in Sources */,
 				39103DFF2BDBA72F00A301C8 /* ApiInfo.swift in Sources */,
 				394925502BDA892F00030E22 /* HomeView.swift in Sources */,
 				3949255A2BDA89B500030E22 /* HomeWireframe.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 final class HomeDataManager {
     // MARK: - Properties
@@ -13,5 +14,16 @@ final class HomeDataManager {
     
     init(apiClient: HomeApiClient) {
         self.apiClient = apiClient
+    }
+    
+    func createCharacters() -> AnyPublisher <AllCharacters, BaseError> {
+        apiClient.getCharacters()
+            .tryMap { response in
+                return response
+            }
+            .mapError { error in
+                return error as? BaseError ?? .generic
+            }
+            .eraseToAnyPublisher()
     }
 }
