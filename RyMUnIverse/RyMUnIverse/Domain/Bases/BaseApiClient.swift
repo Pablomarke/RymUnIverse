@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class BaseApiClient {
+class BaseApiClient: NetworkProtocol {
     private var isReachable: Bool = true
     private let cstatusOk = 200
     enum HttpMethods {
@@ -16,8 +16,7 @@ class BaseApiClient {
     }
     
     // MARK: Characters
-    func getModelDataByUrl<T: Decodable>(relativePath: String, 
-                                         type: T.Type = T.self) -> AnyPublisher<T, BaseError> {
+    func getModelByAPI<T>(relativePath: String, type: T.Type) -> AnyPublisher<T, BaseError> where T : Decodable {
         guard let url = URL(string: relativePath) else {
             return Fail(error: BaseError.failedURL).eraseToAnyPublisher()
         }
@@ -27,7 +26,7 @@ class BaseApiClient {
 
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
             .tryMap { data, response in
-                guard let httpResponse = response as? HTTPURLResponse, 
+                guard let httpResponse = response as? HTTPURLResponse,
                         httpResponse.statusCode == self.cstatusOk else {
                     throw BaseError.invalidResponse
                 }

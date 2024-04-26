@@ -12,7 +12,7 @@ final class HomeApiClient: BaseApiClient {
     // MARK: - Public methods -
    func getCharacters() -> AnyPublisher <AllCharacters, BaseError> {
         let url = "https://rickandmortyapi.com/api/character"
-        return getModelDataByUrl(relativePath: url,
+        return getModelByAPI(relativePath: url,
                                        type: AllCharacters.self)
     }
 }
