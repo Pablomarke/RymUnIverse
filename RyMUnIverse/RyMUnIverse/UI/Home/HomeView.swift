@@ -10,14 +10,18 @@ import SwiftUI
 struct HomeView: View {
     // MARK: - Properties -
     @ObservedObject var viewModel: HomeViewModel
-
+    
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
     }
     
     // MARK: - View -
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(content: {
+            ForEach(viewModel.charactersForView) { data in
+                    Text(data.name)
+                }
+        })
         // MARK: - Lifecycle -
             .onAppear {
                 viewModel.createCharacters()

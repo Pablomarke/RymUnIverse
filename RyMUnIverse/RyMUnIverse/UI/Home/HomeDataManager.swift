@@ -16,6 +16,7 @@ final class HomeDataManager {
         self.apiClient = apiClient
     }
     
+    // MARK: - Public Method -
     func createCharacters() -> AnyPublisher <AllCharacters, BaseError> {
         apiClient.getCharacters()
             .tryMap { response in
