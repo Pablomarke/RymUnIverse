@@ -19,12 +19,5 @@ final class HomeDataManager {
     // MARK: - Public Method -
     func createCharacters() -> AnyPublisher <AllCharacters, BaseError> {
         apiClient.getCharacters()
-            .tryMap { response in
-                return response
-            }
-            .mapError { error in
-                return error as? BaseError ?? .generic
-            }
-            .eraseToAnyPublisher()
     }
 }
