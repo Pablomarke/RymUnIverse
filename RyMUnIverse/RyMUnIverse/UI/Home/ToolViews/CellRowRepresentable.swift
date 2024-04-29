@@ -6,21 +6,18 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct CellRowRepresentable: View {
     var model: CellRepresentable
     
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: model.image)) { image in
-                image
-                    .resizable()
-                    .frame(width: 120,
-                           height: 120)
-            } placeholder: {
-                Image(systemName: "photo")
-            }
-            .background(.clear)
+            KFImage(URL(string: model.image))
+                .resizable()
+                .frame(width: 120,
+                       height: 120)
+                .background(.clear)
             
             Text(model.name)
         }
