@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     // MARK: - Properties -
     @ObservedObject var viewModel: HomeViewModel
+    @State private var searchText = ""
     
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
@@ -17,11 +18,20 @@ struct HomeView: View {
     
     // MARK: - View -
     var body: some View {
-        List(content: {
-            ForEach(viewModel.charactersForView) { data in
-                Text(data.name)
+        VStack {
+            SearchBar(text: $searchText)
+            
+            List(content: {
+                ForEach(viewModel.charactersForView) { data in
+                    CellRowRepresentable(model: data)
+                }
             }
-        })
+            )
+            .listStyle(PlainListStyle())
+                        .padding(.top)
+        }
+        .padding()
+
         // MARK: - Lifecycle -
         .onAppear {
             viewModel.createCharacters()
