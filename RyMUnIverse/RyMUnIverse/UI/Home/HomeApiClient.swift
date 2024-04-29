@@ -15,4 +15,11 @@ final class HomeApiClient: BaseApiClient {
         return getModelByAPI(relativePath: url,
                              type: AllCharacters.self)
     }
+    
+    func getCharacterBySearch(parameter: String) -> AnyPublisher <AllCharacters, BaseError> {
+        let url = Endpoint.baseUrl + Endpoint.allCharacters
+        return getModelWithParametersByAPI(relativePath: url,
+                                           parameter: parameter,
+                                           type: AllCharacters.self)
+    }
 }

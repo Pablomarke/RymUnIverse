@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class HomeDataManager {
+struct HomeDataManager {
     // MARK: - Properties
     private var apiClient: HomeApiClient
     
@@ -19,5 +19,9 @@ final class HomeDataManager {
     // MARK: - Public Method -
     func createCharacters() -> AnyPublisher <AllCharacters, BaseError> {
         apiClient.getCharacters()
+    }
+    
+    func getCharactersBySearch(parameter: String) -> AnyPublisher <AllCharacters, BaseError> {
+        apiClient.getCharacterBySearch(parameter: parameter)
     }
 }

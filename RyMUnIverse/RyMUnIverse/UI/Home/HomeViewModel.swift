@@ -29,4 +29,15 @@ final class HomeViewModel: ObservableObject {
                 self?.charactersForView.append(contentsOf: data.results)
             }.store(in: &cancellables)
     }
+    
+    func getCharactersLisBySearch(parameter: String) {
+        dataManager.getCharactersBySearch(parameter: parameter)
+            .sink { completion in
+                if case let .failure(error) = completion {
+                    print("Error \(error)")
+                }
+            } receiveValue: { [weak self] data in
+                self?.charactersForView = data.results
+            }.store(in: &cancellables)
+    }
 }

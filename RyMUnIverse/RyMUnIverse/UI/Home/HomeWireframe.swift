@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class HomeWireFrame {
+struct HomeWireFrame {
     //MARK: Public Methods
     var view: AnyView {
         let apiClient: HomeApiClient = HomeApiClient()
