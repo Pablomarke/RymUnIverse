@@ -222,15 +222,23 @@
 		394925512BDA894900030E22 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				396B86C62BE03C31002B6C9A /* ToolViews */,
 				3949254F2BDA892F00030E22 /* HomeView.swift */,
 				394925522BDA896A00030E22 /* HomeViewModel.swift */,
 				394925572BDA899F00030E22 /* HomeDataManager.swift */,
 				394925552BDA898800030E22 /* HomeApiClient.swift */,
 				394925592BDA89B500030E22 /* HomeWireframe.swift */,
-				392023D12BDFAC7B00709E47 /* CellRowRepresentable.swift */,
-				392023D32BDFB44800709E47 /* SearchBar.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		396B86C62BE03C31002B6C9A /* ToolViews */ = {
+			isa = PBXGroup;
+			children = (
+				392023D32BDFB44800709E47 /* SearchBar.swift */,
+				392023D12BDFAC7B00709E47 /* CellRowRepresentable.swift */,
+			);
+			path = ToolViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

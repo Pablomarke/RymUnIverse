@@ -15,8 +15,8 @@ struct CellRowRepresentable: View {
             AsyncImage(url: URL(string: model.image)) { image in
                 image
                     .resizable()
-                    .frame(width: 90, 
-                           height: 90)
+                    .frame(width: 120,
+                           height: 120)
             } placeholder: {
                 Image(systemName: "photo")
             }
