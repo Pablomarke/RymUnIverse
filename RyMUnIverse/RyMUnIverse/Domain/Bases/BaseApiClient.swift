@@ -9,10 +9,10 @@ import Foundation
 import Combine
 
 class BaseApiClient: NetworkProtocol {
-
-    
+    // MARK: - Properties -
     private var isReachable: Bool = true
     private let cstatusOk = 200
+   
     enum HttpMethods {
         static let get = "GET"
     }

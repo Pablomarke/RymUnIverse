@@ -36,6 +36,7 @@ struct HomeView: View {
         .onAppear {
             viewModel.createCharacters()
         }
+      
         .onChange(of: searchText) { newValue in
             viewModel.getCharactersLisBySearch(parameter: newValue)
         }
