@@ -18,4 +18,5 @@ struct Character: Codable, Identifiable, Equatable, CellRepresentable {
     let gender: String
     var type: String
     let episode: [String]
+    let url: String
 }

@@ -23,11 +23,11 @@ struct HomeView: View {
                 SearchBar(text: $searchText)
                 
                 List(content: {
-                    ForEach(viewModel.charactersForView) { data in
+                    ForEach(viewModel.charactersForView) { character in
                         NavigationLink {
-                            DetailWireframe(model: data).view
+                            DetailWireframe.createView(model: character)
                         } label: {
-                            CellRowRepresentable(model: data)
+                            CellRowRepresentable(model: character)
                         }
                     }
                 }

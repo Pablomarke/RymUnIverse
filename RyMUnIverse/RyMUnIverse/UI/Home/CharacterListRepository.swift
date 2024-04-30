@@ -8,12 +8,12 @@
 import Foundation
 import Combine
 
-protocol CharactersRepository {
+protocol CharacterListRepository {
     func get() -> AnyPublisher <Characters, BaseError>
     func getBy(name: String) -> AnyPublisher <Characters, BaseError>
 }
 
-struct CharacterRepositoryImpl: CharactersRepository {
+struct CharacterListRepositoryImpl: CharacterListRepository {
     // MARK: - Properties
     private let characterDataSource: CharactersDataSource
     

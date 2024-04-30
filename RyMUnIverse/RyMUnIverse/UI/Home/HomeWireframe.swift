@@ -10,7 +10,9 @@ import SwiftUI
 enum HomeWireframe {
     static func createView() -> some View {
         let characterUseCase: CharacterUseCase = CharacterUseCaseImpl()
-        let viewModel: HomeViewModel = .init(characterUseCase: characterUseCase)
+        let searchUseCase: SearchUseCase = SearchUseCaseImpl()
+        let viewModel: HomeViewModel = .init(characterUseCase: characterUseCase,
+                                             searchUseCase: searchUseCase)
         let view = HomeView(viewModel: viewModel)
         
         return view

@@ -11,11 +11,14 @@ import Combine
 final class HomeViewModel: ObservableObject {
     // MARK: - Properties -
     private let characterUseCase: CharacterUseCase
+    private let searchUseCase: SearchUseCase
     var cancellables: Set<AnyCancellable> = []
     @Published var charactersForView: Characters = []
     
-    init(characterUseCase: CharacterUseCase) {
+    init(characterUseCase: CharacterUseCase,
+         searchUseCase: SearchUseCase) {
         self.characterUseCase = characterUseCase
+        self.searchUseCase = searchUseCase
     }
     
     // MARK: - Public Method -
@@ -32,7 +35,7 @@ final class HomeViewModel: ObservableObject {
     }
     
     func getCharactersListBySearch(parameter: String) {
-        characterUseCase.getBy(name: parameter)
+        searchUseCase.getBy(name: parameter)
             .sink { completion in
                 if case let .failure(error) = completion {
                     //TODO: error implemented

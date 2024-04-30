@@ -6,7 +6,18 @@
 //
 
 import Foundation
+import Combine
 
-final class DetailApiClient: BaseApiClient {
+protocol DetailApiClient {
+    func get() -> AnyPublisher<Character, BaseError>
+}
+
+final class DetailApiClientImpl: BaseApiClient,
+                                 DetailApiClient {
     
+    
+    func get() -> AnyPublisher<Character, BaseError> {
+        return getModelByAPI(relativePath: "",
+                             type: Character.self)
+    }
 }
