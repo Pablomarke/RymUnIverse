@@ -10,34 +10,36 @@ import Combine
 
 final class HomeViewModel: ObservableObject {
     // MARK: - Properties -
-    private var dataManager: HomeDataManager
+    private let characterUseCase: CharacterUseCase
     var cancellables: Set<AnyCancellable> = []
     @Published var charactersForView: Characters = []
     
-    init(dataManager: HomeDataManager) {
-        self.dataManager = dataManager
+    init(characterUseCase: CharacterUseCase) {
+        self.characterUseCase = characterUseCase
     }
     
     // MARK: - Public Method -
-    func createCharacters() {
-        dataManager.createCharacters()
+    func getAllCharacters() {
+        characterUseCase.get()
             .sink { completion in
                 if case let .failure(error) = completion {
+                   //TODO: error implemented
                     print("Error \(error)")
                 }
-            } receiveValue: { [weak self] data in
-                self?.charactersForView.append(contentsOf: data.results)
+            } receiveValue: { [weak self] characters in
+                self?.charactersForView.append(contentsOf: characters)
             }.store(in: &cancellables)
     }
     
-    func getCharactersLisBySearch(parameter: String) {
-        dataManager.getCharactersBySearch(parameter: parameter)
+    func getCharactersListBySearch(parameter: String) {
+        characterUseCase.getBy(name: parameter)
             .sink { completion in
                 if case let .failure(error) = completion {
+                    //TODO: error implemented
                     print("Error \(error)")
                 }
-            } receiveValue: { [weak self] data in
-                self?.charactersForView = data.results
+            } receiveValue: { [weak self] characters in
+                self?.charactersForView = characters
             }.store(in: &cancellables)
     }
 }

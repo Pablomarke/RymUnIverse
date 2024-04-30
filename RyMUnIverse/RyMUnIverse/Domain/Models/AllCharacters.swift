@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct AllCharacters: Codable {
-    let results: Characters
+struct AllCharacters: Codable, Equatable {
+    let characters: Characters
     let info: ApiInfo?
+    
+    enum CodingKeys: String, CodingKey {
+        case characters = "results"
+        case info
+    }
 }

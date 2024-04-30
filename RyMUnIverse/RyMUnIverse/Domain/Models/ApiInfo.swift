@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ApiInfo: Codable {
+struct ApiInfo: Codable, Equatable {
     let count: Int
     let pages: Int
     let next: String?

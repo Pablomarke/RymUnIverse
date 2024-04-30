@@ -7,24 +7,12 @@
 
 import SwiftUI
 
-struct HomeWireFrame {
-    //MARK: Public Methods
-    var view: AnyView {
-        let apiClient: HomeApiClient = HomeApiClient()
-        let dataManager: HomeDataManager = createDataManager(apiClient: apiClient)
-        let viewModel: HomeViewModel = createViewModel(with: dataManager)
+enum HomeWireframe {
+    static func createView() -> some View {
+        let characterUseCase: CharacterUseCase = CharacterUseCaseImpl()
+        let viewModel: HomeViewModel = .init(characterUseCase: characterUseCase)
         let view = HomeView(viewModel: viewModel)
         
-        return AnyView(view)
-    }
-    
-    // MARK: - Private methods
-    private func createDataManager(apiClient: HomeApiClient) -> HomeDataManager {
-        let dataManager = HomeDataManager(apiClient: apiClient)
-        return dataManager
-    }
-    
-    private func createViewModel(with dataManager: HomeDataManager) -> HomeViewModel {
-        return HomeViewModel(dataManager: dataManager)
+        return view
     }
 }

@@ -1,5 +1,5 @@
 //
-//  HomeApiClient.swift
+//  CharactersApiClient.swift
 //  RyMUnIverse
 //
 //  Created by Pablo Márquez Marín on 25/4/24.
@@ -8,9 +8,13 @@
 import Foundation
 import Combine
 
-final class HomeApiClient: BaseApiClient {
-    // MARK: - Public methods -
-    func getCharacters() -> AnyPublisher <AllCharacters, BaseError> {
+protocol CharactersApiClient {
+    func get() -> AnyPublisher <AllCharacters, BaseError>
+    func getCharacterBySearch(parameter: String) -> AnyPublisher <AllCharacters, BaseError>
+}
+
+final class CharactersApiClientImpl: BaseApiClient, CharactersApiClient {
+    func get() -> AnyPublisher <AllCharacters, BaseError> {
         let url = Endpoint.baseUrl + Endpoint.allCharacters
         return getModelByAPI(relativePath: url,
                              type: AllCharacters.self)

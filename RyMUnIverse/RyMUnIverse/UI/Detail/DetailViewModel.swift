@@ -10,11 +10,13 @@ import Combine
 
 final class DetailViewModel: ObservableObject {
     // MARK: - Properties -
+    @Published var model: Character
     private var dataManager: DetailDataManager
     var cancellables: Set<AnyCancellable> = []
     
-    init(dataManager: DetailDataManager) {
+    init(dataManager: DetailDataManager, model: Character) {
         self.dataManager = dataManager
+        self.model = model
     }
     
     // MARK: - Public Method -

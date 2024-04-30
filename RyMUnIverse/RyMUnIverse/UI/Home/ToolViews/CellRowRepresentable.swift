@@ -18,7 +18,7 @@ struct CellRowRepresentable: View {
                 .frame(width: 120,
                        height: 120)
                 .background(.clear)
-            
+                .clipShape(Circle())
             Text(model.name)
         }
     }

@@ -25,7 +25,7 @@ struct HomeView: View {
                 List(content: {
                     ForEach(viewModel.charactersForView) { data in
                         NavigationLink {
-                            DetailWireframe().view
+                            DetailWireframe(model: data).view
                         } label: {
                             CellRowRepresentable(model: data)
                         }
@@ -39,15 +39,15 @@ struct HomeView: View {
         }
     // MARK: - Lifecycle -
         .onAppear {
-            viewModel.createCharacters()
+            viewModel.getAllCharacters()
         }
         
         .onChange(of: searchText) { newValue in
-            viewModel.getCharactersLisBySearch(parameter: newValue)
+            viewModel.getCharactersListBySearch(parameter: newValue)
         }
     }
 }
 
 #Preview {
-    HomeWireFrame().view
+    HomeWireframe.createView()
 }

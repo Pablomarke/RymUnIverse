@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct DetailView: View {
     // MARK: - Properties -
@@ -16,11 +17,11 @@ struct DetailView: View {
     }
     var body: some View {
         VStack {
-            Text("Detail")
+            Text(viewModel.model.name)
+                .font(.title)
+            KFImage(URL(string: viewModel.model.image))
+                .clipShape(Circle()) 
+            Spacer()
         }
     }
-}
-
-#Preview {
-    DetailWireframe().view
 }
