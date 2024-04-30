@@ -18,25 +18,30 @@ struct HomeView: View {
     
     // MARK: - View -
     var body: some View {
-        VStack {
-            SearchBar(text: $searchText)
-            
-            List(content: {
-                ForEach(viewModel.charactersForView) { data in
-                    CellRowRepresentable(model: data)
+        NavigationView {
+            VStack {
+                SearchBar(text: $searchText)
+                
+                List(content: {
+                    ForEach(viewModel.charactersForView) { data in
+                        NavigationLink {
+                            DetailWireframe().view
+                        } label: {
+                            CellRowRepresentable(model: data)
+                        }
+                    }
                 }
+                )
+                .listStyle(PlainListStyle())
+                .padding(.top)
             }
-            )
-            .listStyle(PlainListStyle())
-                        .padding(.top)
+            .padding()
         }
-        .padding()
-
-        // MARK: - Lifecycle -
+    // MARK: - Lifecycle -
         .onAppear {
             viewModel.createCharacters()
         }
-      
+        
         .onChange(of: searchText) { newValue in
             viewModel.getCharactersLisBySearch(parameter: newValue)
         }
