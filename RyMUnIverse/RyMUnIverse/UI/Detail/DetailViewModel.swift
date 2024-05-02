@@ -11,6 +11,7 @@ import Combine
 final class DetailViewModel: ObservableObject {
     // MARK: - Properties -
     @Published var model: Character
+    @Published var episodesModel: Episodes = []
     private let detailUseCase: DetailUseCase
     var cancellables: Set<AnyCancellable> = []
     
@@ -20,16 +21,17 @@ final class DetailViewModel: ObservableObject {
     }
     
     // MARK: - Public Method -
-    func getCharacter() {
-        detailUseCase.getDetail()
-            .sink { completion in
-                if case let .failure(error) = completion {
-                    //TODO: error implemented
-                    print("Error \(error)")
-                }
-            } receiveValue: { [weak self] character in
-                //TODO: Implement
-                self?.model = character
-            }.store(in: &cancellables)
+    func getEpisodes() {
+        for episode in model.episode {
+            detailUseCase.getDetail(relativePath: episode)
+                .sink { completion in
+                    if case let .failure(error) = completion {
+                        //TODO: error implemented
+                        print("Error \(error)")
+                    }
+                } receiveValue: { [weak self] episode in
+                    self?.episodesModel.append(episode)
+                }.store(in: &cancellables)
+        }
     }
 }

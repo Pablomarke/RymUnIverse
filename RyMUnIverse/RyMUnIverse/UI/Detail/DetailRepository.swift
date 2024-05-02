@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol DetailRepository {
-    func get() -> AnyPublisher <Character, BaseError>
+    func get(relativePath: String) -> AnyPublisher <Episode, BaseError>
 }
 
 struct DetailRepositoryImpl: DetailRepository {
@@ -19,8 +19,8 @@ struct DetailRepositoryImpl: DetailRepository {
         self.detailDataSource = detailDataSource
     }
     
-    func get() -> AnyPublisher<Character, BaseError> {
-        detailDataSource.get()
+    func get(relativePath: String) -> AnyPublisher<Episode, BaseError> {
+        detailDataSource.get(relativePath: relativePath)
             .eraseToAnyPublisher()
     }
 }

@@ -69,4 +69,27 @@ class BaseApiClient: NetworkProtocol {
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
+    func getEpisodeByUrl(relativePath: String) -> AnyPublisher<Episode, BaseError> {
+        guard let url = URL(string: relativePath) else {
+            return Fail(error: BaseError.failedURL).eraseToAnyPublisher()
+        }
+
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = HttpMethods.get
+
+        return URLSession.shared.dataTaskPublisher(for: urlRequest)
+            .tryMap { data, response in
+                guard let httpResponse = response as? HTTPURLResponse,
+                        httpResponse.statusCode == self.cstatusOk else {
+                    throw BaseError.invalidResponse
+                }
+                return data
+            }
+            .decode(type: Episode.self, decoder: JSONDecoder())
+            .mapError { error in
+                BaseError.generic
+            }
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
 }

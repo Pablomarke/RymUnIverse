@@ -18,10 +18,30 @@ struct DetailView: View {
     var body: some View {
         VStack {
             Text(viewModel.model.name)
-                .font(.title)
+                .font(.largeTitle)
             KFImage(URL(string: viewModel.model.image))
                 .clipShape(Circle()) 
-            Spacer()
+                .padding()
+           
+                Text("Episodes")
+                .padding(.leading)
+                .frame(maxWidth: .infinity,
+                       alignment: .leading)
+            
+            
+                .font(.title)
+            List {
+                ForEach(viewModel.episodesModel, 
+                        id: \.self) { episode in
+                        Text(episode.name)
+                }
+                    .padding(.top)
+            }
+            .listStyle(PlainListStyle())
         }
+        // MARK: - Lifecycle -
+            .onAppear {
+                viewModel.getEpisodes()
+            }
     }
 }

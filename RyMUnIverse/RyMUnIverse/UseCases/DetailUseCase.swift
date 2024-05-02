@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol DetailUseCase {
-    func getDetail() -> AnyPublisher<Character, BaseError>
+    func getDetail(relativePath: String) -> AnyPublisher<Episode, BaseError>
 }
 
 struct DetailUseCaseImpl: DetailUseCase {
@@ -19,7 +19,7 @@ struct DetailUseCaseImpl: DetailUseCase {
         self.detailRepository = detailRepository
     }
     
-    func getDetail() -> AnyPublisher<Character, BaseError> {
-        detailRepository.get()
+    func getDetail(relativePath: String) -> AnyPublisher<Episode, BaseError> {
+        detailRepository.get(relativePath: relativePath)
     }
 }

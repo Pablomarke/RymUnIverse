@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 protocol DetailDataSource {
-    func get() -> AnyPublisher <Character, BaseError>
+    func get(relativePath: String) -> AnyPublisher <Episode, BaseError>
 }
 
 struct DetailDataSourceImpl: DetailDataSource {
@@ -19,7 +19,7 @@ struct DetailDataSourceImpl: DetailDataSource {
         self.detailApiClient = detailApiClient
     }
     
-    func get() -> AnyPublisher<Character, BaseError> {
-        detailApiClient.get()
+    func get(relativePath: String) -> AnyPublisher<Episode, BaseError> {
+        detailApiClient.getDetails(relativePath: relativePath)
     }
 }

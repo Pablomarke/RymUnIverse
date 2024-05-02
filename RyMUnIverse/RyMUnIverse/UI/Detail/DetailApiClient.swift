@@ -9,15 +9,13 @@ import Foundation
 import Combine
 
 protocol DetailApiClient {
-    func get() -> AnyPublisher<Character, BaseError>
+    func getDetails(relativePath: String) -> AnyPublisher<Episode, BaseError>
 }
 
 final class DetailApiClientImpl: BaseApiClient,
                                  DetailApiClient {
     
-    
-    func get() -> AnyPublisher<Character, BaseError> {
-        return getModelByAPI(relativePath: "",
-                             type: Character.self)
+    func getDetails(relativePath: String) -> AnyPublisher<Episode, BaseError> {
+        return getEpisodeByUrl(relativePath: relativePath)
     }
 }

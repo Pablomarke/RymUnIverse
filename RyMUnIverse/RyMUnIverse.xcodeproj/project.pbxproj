@@ -29,6 +29,7 @@
 		394925582BDA899F00030E22 /* CharacterListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394925572BDA899F00030E22 /* CharacterListRepository.swift */; };
 		3949255A2BDA89B500030E22 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394925592BDA89B500030E22 /* HomeWireframe.swift */; };
 		396B86C92BE03E1F002B6C9A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 396B86C82BE03E1F002B6C9A /* Kingfisher */; };
+		399B62402BE3F76D00B67C94 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399B623F2BE3F76D00B67C94 /* Episode.swift */; };
 		39CAB6652BE0C0AB0064B9A7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CAB6642BE0C0AB0064B9A7 /* DetailView.swift */; };
 		39CAB6672BE0C0E70064B9A7 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CAB6662BE0C0E70064B9A7 /* DetailViewModel.swift */; };
 		39CAB6692BE0C1000064B9A7 /* DetailApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CAB6682BE0C1000064B9A7 /* DetailApiClient.swift */; };
@@ -83,6 +84,7 @@
 		394925552BDA898800030E22 /* CharactersApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersApiClient.swift; sourceTree = "<group>"; };
 		394925572BDA899F00030E22 /* CharacterListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListRepository.swift; sourceTree = "<group>"; };
 		394925592BDA89B500030E22 /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		399B623F2BE3F76D00B67C94 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		39CAB6642BE0C0AB0064B9A7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		39CAB6662BE0C0E70064B9A7 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		39CAB6682BE0C1000064B9A7 /* DetailApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailApiClient.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				39103DFE2BDBA72F00A301C8 /* ApiInfo.swift */,
 				39103E002BDBA76D00A301C8 /* AllCharacters.swift */,
 				39103E022BDBA78700A301C8 /* Character.swift */,
+				399B623F2BE3F76D00B67C94 /* Episode.swift */,
 				39103E042BDBA86F00A301C8 /* Endpoint.swift */,
 			);
 			path = Models;
@@ -441,6 +444,7 @@
 				39103DFF2BDBA72F00A301C8 /* ApiInfo.swift in Sources */,
 				39CAB66D2BE0C2450064B9A7 /* DetailDataSource.swift in Sources */,
 				394925502BDA892F00030E22 /* HomeView.swift in Sources */,
+				399B62402BE3F76D00B67C94 /* Episode.swift in Sources */,
 				39CAB6702BE0F6720064B9A7 /* CharacterUseCase.swift in Sources */,
 				39CAB6782BE14F7E0064B9A7 /* SearchUseCase.swift in Sources */,
 				39CAB6722BE0FDC20064B9A7 /* CharactersDataSource.swift in Sources */,
