@@ -47,7 +47,7 @@ class BaseApiClient: NetworkProtocol {
                                         parameter: String,
                                         type: T.Type) -> AnyPublisher<T, BaseError> where T : Decodable {
         //TODO: query
-        guard let url = URL(string: relativePath + "?name=\(parameter)") else {
+        guard let url = URL(string: relativePath + parameter) else {
             return Fail(error: BaseError.failedURL).eraseToAnyPublisher()
         }
 

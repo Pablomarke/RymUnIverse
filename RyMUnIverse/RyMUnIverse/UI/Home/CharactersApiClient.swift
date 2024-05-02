@@ -21,7 +21,7 @@ final class CharactersApiClientImpl: BaseApiClient, CharactersApiClient {
     }
     
     func getCharacterBySearch(parameter: String) -> AnyPublisher <AllCharacters, BaseError> {
-        let url = Endpoint.baseUrl + Endpoint.allCharacters
+        let url = Endpoint.baseUrl + Endpoint.name
         return getModelWithParametersByAPI(relativePath: url,
                                            parameter: parameter,
                                            type: AllCharacters.self)
