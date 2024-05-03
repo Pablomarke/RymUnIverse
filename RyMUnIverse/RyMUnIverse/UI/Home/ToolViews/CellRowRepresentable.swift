@@ -21,12 +21,17 @@ struct CellRowRepresentable: View {
                 .fadeInAnimation()
             VStack {
                 Text(model.name)
-                    .font(.callout)
+                    .font(.title2)
+                    .foregroundColor(Color(.sRGB,
+                                           red: 0.2, green: 0.2, blue: 0.2,
+                                           opacity: 1.0))
                 Text(model.status)
                     .font(.subheadline)
+                    .foregroundColor(Color(.sRGB,
+                                           red: 0.3, green: 0.3, blue: 0.3,
+                                           opacity: 1.0))
             }
-            
-            
+            .padding()
         }
     }
 }

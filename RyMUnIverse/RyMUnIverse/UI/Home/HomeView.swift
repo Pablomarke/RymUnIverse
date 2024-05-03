@@ -21,27 +21,13 @@ struct HomeView: View {
         NavigationView {
             appMainBackground {
                 VStack {
-                    Text("Rick y Morty")
-                        .font(.custom("Get Schwifty", size: 40))
-                        .foregroundStyle(Color.white)
-                        .padding()
+                    HeaderTextView()
                     SearchBar(text: $searchText)
-                    List(content: {
-                        ForEach(viewModel.charactersForView) { character in
-                            NavigationLink {
-                                DetailWireframe.createView(model: character)
-                            } label: {
-                                CellRowRepresentable(model: character)
-                            }
-                        }
-                    }
-                    )
-                    .listStyle(PlainListStyle())
-                    .padding(.bottom, -20)
+                    CharacterListView(characters: viewModel.charactersForView)
                 }
             }
         }
-    // MARK: - Lifecycle -
+        // MARK: - Lifecycle -
         .onAppear {
             viewModel.getAllCharacters()
         }
