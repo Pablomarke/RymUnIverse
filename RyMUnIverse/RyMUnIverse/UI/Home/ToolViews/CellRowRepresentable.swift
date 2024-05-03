@@ -17,9 +17,16 @@ struct CellRowRepresentable: View {
                 .resizable()
                 .frame(width: 120,
                        height: 120)
-                .background(.clear)
                 .clipShape(Circle())
-            Text(model.name)
+                .fadeInAnimation()
+            VStack {
+                Text(model.name)
+                    .font(.callout)
+                Text(model.status)
+                    .font(.subheadline)
+            }
+            
+            
         }
     }
 }

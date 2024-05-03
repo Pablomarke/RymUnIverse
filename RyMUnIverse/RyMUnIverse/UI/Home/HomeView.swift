@@ -19,23 +19,29 @@ struct HomeView: View {
     // MARK: - View -
     var body: some View {
         NavigationView {
-            VStack {
-                SearchBar(text: $searchText)
-                
-                List(content: {
-                    ForEach(viewModel.charactersForView) { character in
-                        NavigationLink {
-                            DetailWireframe.createView(model: character)
-                        } label: {
-                            CellRowRepresentable(model: character)
+            appMainBackground {
+                VStack {
+                    Text("Rick y Morty")
+                        .font(.title)
+                        .foregroundStyle(Color.white)
+                        .padding()
+                    SearchBar(text: $searchText)
+                        .padding(.bottom)
+                        
+                    List(content: {
+                        ForEach(viewModel.charactersForView) { character in
+                            NavigationLink {
+                                DetailWireframe.createView(model: character)
+                            } label: {
+                                CellRowRepresentable(model: character)
+                            }
                         }
                     }
+                    )
+                    .listStyle(PlainListStyle())
+                    .padding(.bottom, -20)
                 }
-                )
-                .listStyle(PlainListStyle())
-                .padding(.top)
             }
-            .padding()
         }
     // MARK: - Lifecycle -
         .onAppear {
