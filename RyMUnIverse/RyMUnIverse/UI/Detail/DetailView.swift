@@ -16,28 +16,30 @@ struct DetailView: View {
         self.viewModel = viewModel
     }
     var body: some View {
-        VStack {
-            Text(viewModel.model.name)
-                .font(.largeTitle)
-            KFImage(URL(string: viewModel.model.image))
-                .clipShape(Circle()) 
-                .padding()
-           
+        appMainBackground {
+            VStack {
+                Text(viewModel.model.name)
+                    .font(.custom("Get Schwifty", size: 40))
+                    .foregroundStyle(Color.white)
+                KFImage(URL(string: viewModel.model.image))
+                    .clipShape(Circle())
+                    .padding()
+                    .fadeInAnimation()
                 Text("Episodes")
-                .padding(.leading)
-                .frame(maxWidth: .infinity,
-                       alignment: .leading)
-            
-            
-                .font(.title)
-            List {
-                ForEach(viewModel.episodesModel, 
-                        id: \.self) { episode in
+                    .padding(.leading)
+                    .frame(maxWidth: .infinity,
+                           alignment: .leading)
+                    .foregroundStyle(Color.white)
+                    .font(.title)
+                List {
+                    ForEach(viewModel.episodesModel,
+                            id: \.self) { episode in
                         Text(episode.name)
+                    }
+                            .padding(.top)
                 }
-                    .padding(.top)
+                .listStyle(PlainListStyle())
             }
-            .listStyle(PlainListStyle())
         }
         // MARK: - Lifecycle -
             .onAppear {
