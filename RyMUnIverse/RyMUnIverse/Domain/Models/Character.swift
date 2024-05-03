@@ -9,7 +9,7 @@ import Foundation
 
 typealias Characters = [Character]
 
-struct Character: Codable, Identifiable, CellRepresentable {    
+struct Character: Codable, Identifiable, Equatable, CellRepresentable {    
     let id: Int
     let name: String
     let status: String
@@ -18,4 +18,5 @@ struct Character: Codable, Identifiable, CellRepresentable {
     let gender: String
     var type: String
     let episode: [String]
+    let url: String
 }
