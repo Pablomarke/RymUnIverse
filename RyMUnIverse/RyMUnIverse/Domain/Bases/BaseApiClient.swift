@@ -10,7 +10,6 @@ import Combine
 
 class BaseApiClient: NetworkProtocol {
     // MARK: - Properties -
-    private var isReachable: Bool = true
     private let cstatusOk = 200
    
     enum HttpMethods {
@@ -69,6 +68,7 @@ class BaseApiClient: NetworkProtocol {
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
+    
     func getEpisodeByUrl(relativePath: String) -> AnyPublisher<Episode, BaseError> {
         guard let url = URL(string: relativePath) else {
             return Fail(error: BaseError.failedURL).eraseToAnyPublisher()
