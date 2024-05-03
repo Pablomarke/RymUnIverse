@@ -19,7 +19,7 @@ struct DetailView: View {
         appMainBackground {
             VStack {
                 Text(viewModel.model.name)
-                    .font(.largeTitle)
+                    .font(.custom("Get Schwifty", size: 40))
                     .foregroundStyle(Color.white)
                 KFImage(URL(string: viewModel.model.image))
                     .clipShape(Circle())

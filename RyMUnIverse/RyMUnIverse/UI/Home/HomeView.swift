@@ -22,12 +22,10 @@ struct HomeView: View {
             appMainBackground {
                 VStack {
                     Text("Rick y Morty")
-                        .font(.title)
+                        .font(.custom("Get Schwifty", size: 40))
                         .foregroundStyle(Color.white)
                         .padding()
                     SearchBar(text: $searchText)
-                        .padding(.bottom)
-                        
                     List(content: {
                         ForEach(viewModel.charactersForView) { character in
                             NavigationLink {

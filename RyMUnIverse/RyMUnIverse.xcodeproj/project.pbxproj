@@ -32,6 +32,7 @@
 		395AE6BA2BE4DC5C00C52525 /* FadeInModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395AE6B92BE4DC5C00C52525 /* FadeInModifier.swift */; };
 		396B86C92BE03E1F002B6C9A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 396B86C82BE03E1F002B6C9A /* Kingfisher */; };
 		399B62402BE3F76D00B67C94 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399B623F2BE3F76D00B67C94 /* Episode.swift */; };
+		39A5C34C2BE4F262007CF4D9 /* get_schwifty.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39A5C34B2BE4F262007CF4D9 /* get_schwifty.ttf */; };
 		39CAB6652BE0C0AB0064B9A7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CAB6642BE0C0AB0064B9A7 /* DetailView.swift */; };
 		39CAB6672BE0C0E70064B9A7 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CAB6662BE0C0E70064B9A7 /* DetailViewModel.swift */; };
 		39CAB6692BE0C1000064B9A7 /* DetailApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CAB6682BE0C1000064B9A7 /* DetailApiClient.swift */; };
@@ -89,6 +90,8 @@
 		395AE6B62BE4DC0700C52525 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 		395AE6B92BE4DC5C00C52525 /* FadeInModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInModifier.swift; sourceTree = "<group>"; };
 		399B623F2BE3F76D00B67C94 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		39A5C34A2BE4EFCF007CF4D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		39A5C34B2BE4F262007CF4D9 /* get_schwifty.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = get_schwifty.ttf; sourceTree = "<group>"; };
 		39CAB6642BE0C0AB0064B9A7 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		39CAB6662BE0C0E70064B9A7 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		39CAB6682BE0C1000064B9A7 /* DetailApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailApiClient.swift; sourceTree = "<group>"; };
@@ -180,6 +183,7 @@
 		3949251F2BDA88BF00030E22 /* RyMUnIverse */ = {
 			isa = PBXGroup;
 			children = (
+				39A5C34A2BE4EFCF007CF4D9 /* Info.plist */,
 				39CAB66E2BE0F6590064B9A7 /* UseCases */,
 				3949254B2BDA88EE00030E22 /* App */,
 				3949254D2BDA88FC00030E22 /* Domain */,
@@ -226,6 +230,7 @@
 		3949254C2BDA88F500030E22 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				39A5C34F2BE4F4F9007CF4D9 /* Fonts */,
 				394925242BDA88C100030E22 /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -289,6 +294,14 @@
 				392023D12BDFAC7B00709E47 /* CellRowRepresentable.swift */,
 			);
 			path = ToolViews;
+			sourceTree = "<group>";
+		};
+		39A5C34F2BE4F4F9007CF4D9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				39A5C34B2BE4F262007CF4D9 /* get_schwifty.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		39CAB6632BE0C08E0064B9A7 /* Detail */ = {
@@ -424,6 +437,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A5C34C2BE4F262007CF4D9 /* get_schwifty.ttf in Resources */,
 				394925282BDA88C100030E22 /* Preview Assets.xcassets in Resources */,
 				394925252BDA88C100030E22 /* Assets.xcassets in Resources */,
 			);
@@ -644,6 +658,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RyMUnIverse/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RyMUnIverse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -672,6 +687,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RyMUnIverse/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RyMUnIverse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
