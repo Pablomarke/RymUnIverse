@@ -51,6 +51,8 @@
 		39CAB6782BE14F7E0064B9A7 /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CAB6772BE14F7E0064B9A7 /* SearchUseCase.swift */; };
 		39E51A7C2BEBEEA200B186C9 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E51A7B2BEBEEA200B186C9 /* LaunchView.swift */; };
 		39E51A7F2BEBF45600B186C9 /* BackArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E51A7E2BEBF45600B186C9 /* BackArrow.swift */; };
+		39E51A812BEBF52000B186C9 /* CharacterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E51A802BEBF52000B186C9 /* CharacterHeaderView.swift */; };
+		39E51A832BEBF5D300B186C9 /* EpisodesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E51A822BEBF5D300B186C9 /* EpisodesListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +116,8 @@
 		39CAB6772BE14F7E0064B9A7 /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
 		39E51A7B2BEBEEA200B186C9 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		39E51A7E2BEBF45600B186C9 /* BackArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackArrow.swift; sourceTree = "<group>"; };
+		39E51A802BEBF52000B186C9 /* CharacterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterHeaderView.swift; sourceTree = "<group>"; };
+		39E51A822BEBF5D300B186C9 /* EpisodesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +359,8 @@
 			isa = PBXGroup;
 			children = (
 				39E51A7E2BEBF45600B186C9 /* BackArrow.swift */,
+				39E51A802BEBF52000B186C9 /* CharacterHeaderView.swift */,
+				39E51A822BEBF5D300B186C9 /* EpisodesListView.swift */,
 			);
 			path = ToolView;
 			sourceTree = "<group>";
@@ -525,9 +531,11 @@
 				39CAB6742BE1428B0064B9A7 /* DetailRepository.swift in Sources */,
 				39CAB6672BE0C0E70064B9A7 /* DetailViewModel.swift in Sources */,
 				39103E0D2BDC2C3300A301C8 /* NetworkProtocol.swift in Sources */,
+				39E51A812BEBF52000B186C9 /* CharacterHeaderView.swift in Sources */,
 				3949255A2BDA89B500030E22 /* HomeWireframe.swift in Sources */,
 				39CAB6692BE0C1000064B9A7 /* DetailApiClient.swift in Sources */,
 				39103E0F2BDC333600A301C8 /* CellRepresentable.swift in Sources */,
+				39E51A832BEBF5D300B186C9 /* EpisodesListView.swift in Sources */,
 				39103E012BDBA76D00A301C8 /* AllCharacters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

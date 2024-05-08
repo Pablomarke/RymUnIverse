@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Kingfisher
 
 struct DetailView: View {
     // MARK: - Properties -
@@ -18,27 +17,9 @@ struct DetailView: View {
     var body: some View {
         appMainBackground {
             VStack {
-                Text(viewModel.model.name)
-                    .font(.custom("Get Schwifty", size: 40))
-                    .foregroundStyle(Color.white)
-                KFImage(URL(string: viewModel.model.image))
-                    .clipShape(Circle())
-                    .padding()
-                    .fadeInAnimation()
-                Text("Episodes")
-                    .padding(.leading)
-                    .frame(maxWidth: .infinity,
-                           alignment: .leading)
-                    .foregroundStyle(Color.white)
-                    .font(.title)
-                List {
-                    ForEach(viewModel.episodesModel,
-                            id: \.self) { episode in
-                        Text(episode.name)
-                    }
-                            .padding(.top)
-                }
-                .listStyle(PlainListStyle())
+                CharacterHeaderView(name: viewModel.model.name,
+                                    image: viewModel.model.image)
+                EpisodesListView(episodes: viewModel.episodesModel)
             }
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: BackArrow())
