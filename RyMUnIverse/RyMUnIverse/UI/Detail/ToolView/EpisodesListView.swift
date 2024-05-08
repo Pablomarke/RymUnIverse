@@ -12,6 +12,7 @@ struct EpisodesListView: View {
     
     var body: some View {
         Text("Episodes")
+            .font(.custom("Get Schwifty", size: 24))
             .padding(.leading)
             .frame(maxWidth: .infinity,
                    alignment: .leading)
