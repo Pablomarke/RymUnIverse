@@ -49,6 +49,7 @@
 		39CAB6742BE1428B0064B9A7 /* DetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CAB6732BE1428B0064B9A7 /* DetailRepository.swift */; };
 		39CAB6762BE14AD80064B9A7 /* DetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CAB6752BE14AD80064B9A7 /* DetailUseCase.swift */; };
 		39CAB6782BE14F7E0064B9A7 /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CAB6772BE14F7E0064B9A7 /* SearchUseCase.swift */; };
+		39E51A7C2BEBEEA200B186C9 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E51A7B2BEBEEA200B186C9 /* LaunchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		39CAB6732BE1428B0064B9A7 /* DetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepository.swift; sourceTree = "<group>"; };
 		39CAB6752BE14AD80064B9A7 /* DetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUseCase.swift; sourceTree = "<group>"; };
 		39CAB6772BE14F7E0064B9A7 /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
+		39E51A7B2BEBEEA200B186C9 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,8 +261,10 @@
 			isa = PBXGroup;
 			children = (
 				395AE6B82BE4DC3D00C52525 /* Animations */,
+				39E51A7A2BEBED9100B186C9 /* LaunchScreen */,
 				394925512BDA894900030E22 /* Home */,
 				39CAB6632BE0C08E0064B9A7 /* Detail */,
+				39E51A7B2BEBEEA200B186C9 /* LaunchView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -335,6 +339,13 @@
 				39CAB6772BE14F7E0064B9A7 /* SearchUseCase.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		39E51A7A2BEBED9100B186C9 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				394925582BDA899F00030E22 /* CharacterListRepository.swift in Sources */,
+				39E51A7C2BEBEEA200B186C9 /* LaunchView.swift in Sources */,
 				395AE6BA2BE4DC5C00C52525 /* FadeInModifier.swift in Sources */,
 				39CAB66B2BE0C1120064B9A7 /* DetailWireframe.swift in Sources */,
 				394925562BDA898800030E22 /* CharactersApiClient.swift in Sources */,
