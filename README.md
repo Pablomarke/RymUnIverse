@@ -9,6 +9,7 @@ La app está diseñada solo para visualizar personajes y su detalle.
 - Casos de uso
 - Patrón MVVM
 - Wireframe
+- Código siguiendo los patrones SOLID
 
 # Información extra
 ### Información Api
