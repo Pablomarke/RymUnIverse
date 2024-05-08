@@ -40,6 +40,8 @@ struct DetailView: View {
                 }
                 .listStyle(PlainListStyle())
             }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: BackArrow())
         }
         // MARK: - Lifecycle -
             .onAppear {
