@@ -35,6 +35,8 @@ struct HomeView: View {
         .onChange(of: searchText) { newValue in
             viewModel.getCharactersListBySearch(parameter: newValue)
         }
+        .navigationBarBackButtonHidden(true)
+
     }
 }
 
