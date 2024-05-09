@@ -36,10 +36,9 @@ final class HomeViewModel: ObservableObject {
     
     func getCharactersListBySearch(parameter: String) {
         searchUseCase.getBy(name: parameter)
-            .sink { completion in
+            .sink { [weak self] completion in
                 if case let .failure(error) = completion {
-                    //TODO: error implemented
-                    print("Error \(error)")
+                    self?.charactersForView = []
                 }
             } receiveValue: { [weak self] characters in
                 self?.charactersForView = characters
