@@ -22,8 +22,9 @@ struct EpisodesListView: View {
             ForEach(episodes,
                     id: \.self) { episode in
                 Text(episode.name)
+                    .font(.title3)
             }
-                    .padding(.top)
+                    .padding()
         }
         .listStyle(PlainListStyle())
     }
