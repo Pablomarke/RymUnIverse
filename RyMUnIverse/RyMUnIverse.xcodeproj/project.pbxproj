@@ -34,11 +34,7 @@
 		399B62402BE3F76D00B67C94 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399B623F2BE3F76D00B67C94 /* Episode.swift */; };
 		39A5C34C2BE4F262007CF4D9 /* get_schwifty.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39A5C34B2BE4F262007CF4D9 /* get_schwifty.ttf */; };
 		39A5C3512BE4F631007CF4D9 /* HeaderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A5C3502BE4F631007CF4D9 /* HeaderTextView.swift */; };
-		39A5C3522BE4F631007CF4D9 /* HeaderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A5C3502BE4F631007CF4D9 /* HeaderTextView.swift */; };
-		39A5C3532BE4F631007CF4D9 /* HeaderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A5C3502BE4F631007CF4D9 /* HeaderTextView.swift */; };
 		39A5C3552BE4F66D007CF4D9 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A5C3542BE4F66D007CF4D9 /* CharacterListView.swift */; };
-		39A5C3562BE4F66D007CF4D9 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A5C3542BE4F66D007CF4D9 /* CharacterListView.swift */; };
-		39A5C3572BE4F66D007CF4D9 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A5C3542BE4F66D007CF4D9 /* CharacterListView.swift */; };
 		39CAB6652BE0C0AB0064B9A7 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CAB6642BE0C0AB0064B9A7 /* DetailView.swift */; };
 		39CAB6672BE0C0E70064B9A7 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CAB6662BE0C0E70064B9A7 /* DetailViewModel.swift */; };
 		39CAB6692BE0C1000064B9A7 /* DetailApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CAB6682BE0C1000064B9A7 /* DetailApiClient.swift */; };
@@ -83,6 +79,7 @@
 		39103E0E2BDC333600A301C8 /* CellRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellRepresentable.swift; sourceTree = "<group>"; };
 		392023D12BDFAC7B00709E47 /* CellRowRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellRowRepresentable.swift; sourceTree = "<group>"; };
 		392023D32BDFB44800709E47 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		392C21DD2BECF801006F1B1C /* RyMUnIverse.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RyMUnIverse.xctestplan; sourceTree = "<group>"; };
 		3949251D2BDA88BF00030E22 /* RyMUnIverse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RyMUnIverse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		394925202BDA88BF00030E22 /* RyMUnIverseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RyMUnIverseApp.swift; sourceTree = "<group>"; };
 		394925242BDA88C100030E22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -179,6 +176,7 @@
 		394925142BDA88BF00030E22 = {
 			isa = PBXGroup;
 			children = (
+				392C21DD2BECF801006F1B1C /* RyMUnIverse.xctestplan */,
 				3949251F2BDA88BF00030E22 /* RyMUnIverse */,
 				394925302BDA88C200030E22 /* RyMUnIverseTests */,
 				3949253A2BDA88C200030E22 /* RyMUnIverseUITests */,
@@ -544,8 +542,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39A5C3562BE4F66D007CF4D9 /* CharacterListView.swift in Sources */,
-				39A5C3522BE4F631007CF4D9 /* HeaderTextView.swift in Sources */,
 				394925322BDA88C200030E22 /* RyMUnIverseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,8 +552,6 @@
 			files = (
 				3949253E2BDA88C200030E22 /* RyMUnIverseUITestsLaunchTests.swift in Sources */,
 				3949253C2BDA88C200030E22 /* RyMUnIverseUITests.swift in Sources */,
-				39A5C3572BE4F66D007CF4D9 /* CharacterListView.swift in Sources */,
-				39A5C3532BE4F631007CF4D9 /* HeaderTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +606,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -637,6 +632,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TREAT_MISSING_BASELINES_AS_TEST_FAILURES = NO;
 			};
 			name = Debug;
 		};
@@ -675,6 +671,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -692,6 +689,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				TREAT_MISSING_BASELINES_AS_TEST_FAILURES = NO;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

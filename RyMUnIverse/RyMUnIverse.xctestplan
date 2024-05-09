@@ -1,0 +1,51 @@
+{
+  "configurations" : [
+    {
+      "id" : "26455598-BDD8-4D16-A9B0-CF6884F8E894",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:RyMUnIverse.xcodeproj",
+          "identifier" : "3949251C2BDA88BF00030E22",
+          "name" : "RyMUnIverse"
+        },
+        {
+          "containerPath" : "container:RyMUnIverse.xcodeproj",
+          "identifier" : "3949252C2BDA88C200030E22",
+          "name" : "RyMUnIverseTests"
+        }
+      ]
+    },
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:RyMUnIverse.xcodeproj",
+      "identifier" : "3949251C2BDA88BF00030E22",
+      "name" : "RyMUnIverse"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:RyMUnIverse.xcodeproj",
+        "identifier" : "3949252C2BDA88C200030E22",
+        "name" : "RyMUnIverseTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:RyMUnIverse.xcodeproj",
+        "identifier" : "394925362BDA88C200030E22",
+        "name" : "RyMUnIverseUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
