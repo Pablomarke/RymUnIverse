@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 
 typealias Characters = [Character]
 
-struct Character: Codable, Identifiable, Equatable, CellRepresentable {    
+struct Character: Codable, Identifiable, Equatable, CellRepresentable {
     let id: Int
     let name: String
     let status: String
@@ -19,4 +20,14 @@ struct Character: Codable, Identifiable, Equatable, CellRepresentable {
     var type: String
     let episode: [String]
     let url: String
+    var colorStatus: Color  {
+        switch status {
+            case "Alive":
+                 .green
+            case "Dead" :
+                     .red
+            default:
+                    .gray
+        }
+    }
 }
