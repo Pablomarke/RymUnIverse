@@ -21,12 +21,13 @@ struct Character: Codable, Identifiable, Equatable, CellRepresentable {
     let episode: [String]
     let url: String
     var colorStatus: Color  {
-        if self.status == "Alive" {
-            return .green
-        } else if self.status == "Dead" {
-            return .red
-        } else {
-            return .gray
+        switch status {
+            case "Alive":
+                 .green
+            case "Dead" :
+                     .red
+            default:
+                    .gray
         }
     }
 }
