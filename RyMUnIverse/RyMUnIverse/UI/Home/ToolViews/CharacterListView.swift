@@ -9,18 +9,23 @@ import SwiftUI
 
 struct CharacterListView: View {
     var characters: Characters
+    
     var body: some View {
-        List(content: {
-            ForEach(characters) { character in
-                NavigationLink {
-                    DetailWireframe.createView(model: character)
-                } label: {
-                    CellRowRepresentable(model: character)
+        if characters.isEmpty {
+            Text("No characters found")
+                .font(.largeTitle)
+        }
+            List(content: {
+                ForEach(characters) { character in
+                    NavigationLink {
+                        DetailWireframe.createView(model: character)
+                    } label: {
+                        CellRowRepresentable(model: character)
+                    }
                 }
             }
+            )
+            .listStyle(PlainListStyle())
+            .padding(.bottom, -20)
         }
-        )
-        .listStyle(PlainListStyle())
-        .padding(.bottom, -20)
     }
-}
