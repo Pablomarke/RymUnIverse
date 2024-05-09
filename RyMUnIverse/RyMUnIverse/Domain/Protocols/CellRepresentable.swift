@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import SwiftUI
 
 protocol CellRepresentable {
     var name: String { get }
+    var species: String { get }
     var status: String { get }
     var image: String { get }
+    var colorStatus: Color { get }
 }
