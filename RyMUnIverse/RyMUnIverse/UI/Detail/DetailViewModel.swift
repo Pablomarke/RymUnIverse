@@ -11,9 +11,9 @@ import Combine
 final class DetailViewModel: ObservableObject {
     // MARK: - Properties -
     @Published var model: Character
-    @Published var episodesModel: Episodes = []
+    @Published var episodesModel: Episodes = .init()
     private let detailUseCase: DetailUseCase
-    var cancellables: Set<AnyCancellable> = []
+    var cancellables: Set<AnyCancellable> = .init()
     
     init(model: Character, detailUseCase: DetailUseCase) {
         self.model = model

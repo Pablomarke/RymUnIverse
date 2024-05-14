@@ -12,8 +12,8 @@ final class HomeViewModel: ObservableObject {
     // MARK: - Properties -
     private let characterUseCase: CharacterUseCase
     private let searchUseCase: SearchUseCase
-    var cancellables: Set<AnyCancellable> = []
-    @Published var charactersForView: Characters = []
+    var cancellables: Set<AnyCancellable> = .init()
+    @Published var charactersForView: Characters = .init()
     
     init(characterUseCase: CharacterUseCase,
          searchUseCase: SearchUseCase) {
