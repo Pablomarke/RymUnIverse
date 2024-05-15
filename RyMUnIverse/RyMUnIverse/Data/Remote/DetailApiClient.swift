@@ -16,6 +16,7 @@ final class DetailApiClientImpl: BaseApiClient,
                                  DetailApiClient {
     
     func getDetails(relativePath: String) -> AnyPublisher<Episode, BaseError> {
-        return getEpisodeByUrl(relativePath: relativePath)
+        return getModelByAPI(relativePath: relativePath,
+                             type: Episode.self)
     }
 }
