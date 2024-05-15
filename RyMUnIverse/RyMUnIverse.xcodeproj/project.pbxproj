@@ -194,6 +194,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		390C06992BF4C9CF00CDD247 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				39103E0E2BDC333600A301C8 /* CellRepresentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		39103DFD2BDBA66D00A301C8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				39103E0C2BDC2C3300A301C8 /* NetworkProtocol.swift */,
-				39103E0E2BDC333600A301C8 /* CellRepresentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -313,6 +320,7 @@
 		3949254E2BDA890A00030E22 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				390C06992BF4C9CF00CDD247 /* Protocols */,
 				390C06982BF4C8BD00CDD247 /* Views */,
 				396B86C62BE03C31002B6C9A /* ToolViews */,
 				395AE6B52BE4DBE300C52525 /* Extension */,
