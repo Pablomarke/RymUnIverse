@@ -15,7 +15,7 @@ protocol DetailUseCase {
 struct DetailUseCaseImpl: DetailUseCase {
     private let detailRepository: DetailRepository
     
-    init(detailRepository: DetailRepository = DetailRepositoryImpl()) {
+    init(detailRepository: DetailRepository) {
         self.detailRepository = detailRepository
     }
     

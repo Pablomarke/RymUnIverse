@@ -24,6 +24,7 @@ final class HomeViewModel: ObservableObject {
     // MARK: - Public Method -
     func getAllCharacters() {
         characterUseCase.get()
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 if case let .failure(error) = completion {
                     self?.charactersForView = []
