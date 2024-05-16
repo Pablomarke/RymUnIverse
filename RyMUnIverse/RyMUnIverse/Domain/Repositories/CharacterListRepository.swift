@@ -15,21 +15,21 @@ protocol CharacterListRepository {
 
 struct CharacterListRepositoryImpl: CharacterListRepository {
     // MARK: - Properties
-    private let characterDataSource: CharactersDataSource
-    
-    init(characterDataSource: CharactersDataSource = CharactersDataSourceImpl()) {
-        self.characterDataSource = characterDataSource
+    private let charactersDataSource: CharactersDataSource
+
+    init(charactersDataSource: CharactersDataSource) {
+        self.charactersDataSource = charactersDataSource
     }
     
     // MARK: - Public Method -
     func get() -> AnyPublisher<Characters, BaseError> {
-        characterDataSource.get()
+        charactersDataSource.get()
             .map { $0.characters }
             .eraseToAnyPublisher()
     }
     
     func getBy(name: String) -> AnyPublisher <Characters, BaseError> {
-        characterDataSource.getBy(name: name)
+        charactersDataSource.search(by: name)
             .map { $0.characters }
             .eraseToAnyPublisher()
     }
