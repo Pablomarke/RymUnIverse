@@ -15,6 +15,4 @@ protocol NetworkProtocol {
     func getModelWithParametersByAPI<T: Decodable>(relativePath: String,
                                                    parameter: String,
                                                    type: T.Type) -> AnyPublisher<T, BaseError>
-    
-    func getEpisodeByUrl(relativePath: String) -> AnyPublisher<Episode, BaseError>
 }

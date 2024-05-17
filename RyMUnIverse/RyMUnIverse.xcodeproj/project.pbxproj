@@ -146,6 +146,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		390C06942BF4C83E00CDD247 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				394925572BDA899F00030E22 /* CharacterListRepository.swift */,
+				39CAB6732BE1428B0064B9A7 /* DetailRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		390C06952BF4C86700CDD247 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				39103E062BDBAF2A00A301C8 /* Bases */,
+				390C06942BF4C83E00CDD247 /* Repositories */,
+				390C06972BF4C88B00CDD247 /* Remote */,
+				390C06962BF4C88100CDD247 /* Local */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		390C06962BF4C88100CDD247 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				39CAB66C2BE0C2450064B9A7 /* DetailDataSource.swift */,
+				39CAB6712BE0FDC20064B9A7 /* CharactersDataSource.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		390C06972BF4C88B00CDD247 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				39CAB6682BE0C1000064B9A7 /* DetailApiClient.swift */,
+				394925552BDA898800030E22 /* CharactersApiClient.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		390C06982BF4C8BD00CDD247 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				39E51A7A2BEBED9100B186C9 /* LaunchScreen */,
+				394925512BDA894900030E22 /* Home */,
+				39CAB6632BE0C08E0064B9A7 /* Detail */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		390C06992BF4C9CF00CDD247 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				39103E0E2BDC333600A301C8 /* CellRepresentable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		39103DFD2BDBA66D00A301C8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				39103E0C2BDC2C3300A301C8 /* NetworkProtocol.swift */,
-				39103E0E2BDC333600A301C8 /* CellRepresentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -200,8 +255,9 @@
 			isa = PBXGroup;
 			children = (
 				39A5C34A2BE4EFCF007CF4D9 /* Info.plist */,
-				39CAB66E2BE0F6590064B9A7 /* UseCases */,
 				3949254B2BDA88EE00030E22 /* App */,
+				39CAB66E2BE0F6590064B9A7 /* UseCases */,
+				390C06952BF4C86700CDD247 /* Data */,
 				3949254D2BDA88FC00030E22 /* Domain */,
 				3949254C2BDA88F500030E22 /* Assets */,
 				3949254E2BDA890A00030E22 /* UI */,
@@ -255,9 +311,7 @@
 		3949254D2BDA88FC00030E22 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				395AE6B52BE4DBE300C52525 /* Extension */,
 				39103E0B2BDC2C1200A301C8 /* Protocols */,
-				39103E062BDBAF2A00A301C8 /* Bases */,
 				39103DFD2BDBA66D00A301C8 /* Models */,
 			);
 			path = Domain;
@@ -266,10 +320,11 @@
 		3949254E2BDA890A00030E22 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				390C06992BF4C9CF00CDD247 /* Protocols */,
+				390C06982BF4C8BD00CDD247 /* Views */,
+				396B86C62BE03C31002B6C9A /* ToolViews */,
+				395AE6B52BE4DBE300C52525 /* Extension */,
 				395AE6B82BE4DC3D00C52525 /* Animations */,
-				39E51A7A2BEBED9100B186C9 /* LaunchScreen */,
-				394925512BDA894900030E22 /* Home */,
-				39CAB6632BE0C08E0064B9A7 /* Detail */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -277,12 +332,8 @@
 		394925512BDA894900030E22 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				396B86C62BE03C31002B6C9A /* ToolViews */,
 				3949254F2BDA892F00030E22 /* HomeView.swift */,
 				394925522BDA896A00030E22 /* HomeViewModel.swift */,
-				394925572BDA899F00030E22 /* CharacterListRepository.swift */,
-				39CAB6712BE0FDC20064B9A7 /* CharactersDataSource.swift */,
-				394925552BDA898800030E22 /* CharactersApiClient.swift */,
 				394925592BDA89B500030E22 /* HomeWireframe.swift */,
 			);
 			path = Home;
@@ -307,6 +358,9 @@
 		396B86C62BE03C31002B6C9A /* ToolViews */ = {
 			isa = PBXGroup;
 			children = (
+				39E51A822BEBF5D300B186C9 /* EpisodesListView.swift */,
+				39E51A802BEBF52000B186C9 /* CharacterHeaderView.swift */,
+				39E51A7E2BEBF45600B186C9 /* BackArrow.swift */,
 				392023D32BDFB44800709E47 /* SearchBar.swift */,
 				392023D12BDFAC7B00709E47 /* CellRowRepresentable.swift */,
 				39A5C3502BE4F631007CF4D9 /* HeaderTextView.swift */,
@@ -326,12 +380,8 @@
 		39CAB6632BE0C08E0064B9A7 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				39E51A7D2BEBF44600B186C9 /* ToolView */,
 				39CAB6642BE0C0AB0064B9A7 /* DetailView.swift */,
 				39CAB6662BE0C0E70064B9A7 /* DetailViewModel.swift */,
-				39CAB6732BE1428B0064B9A7 /* DetailRepository.swift */,
-				39CAB66C2BE0C2450064B9A7 /* DetailDataSource.swift */,
-				39CAB6682BE0C1000064B9A7 /* DetailApiClient.swift */,
 				39CAB66A2BE0C1120064B9A7 /* DetailWireframe.swift */,
 			);
 			path = Detail;
@@ -353,16 +403,6 @@
 				39E51A7B2BEBEEA200B186C9 /* LaunchView.swift */,
 			);
 			path = LaunchScreen;
-			sourceTree = "<group>";
-		};
-		39E51A7D2BEBF44600B186C9 /* ToolView */ = {
-			isa = PBXGroup;
-			children = (
-				39E51A7E2BEBF45600B186C9 /* BackArrow.swift */,
-				39E51A802BEBF52000B186C9 /* CharacterHeaderView.swift */,
-				39E51A822BEBF5D300B186C9 /* EpisodesListView.swift */,
-			);
-			path = ToolView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
