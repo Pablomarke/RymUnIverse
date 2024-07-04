@@ -15,12 +15,12 @@ protocol DetailRepository {
 struct DetailRepositoryImpl: DetailRepository {
     private let detailDataSource: DetailDataSource
     
-    init(detailDataSource: DetailDataSource = DetailDataSourceImpl()) {
+    init(detailDataSource: DetailDataSource) {
         self.detailDataSource = detailDataSource
     }
     
     func get(relativePath: String) -> AnyPublisher<Episode, BaseError> {
-        detailDataSource.get(relativePath: relativePath)
+        detailDataSource.getDetail(relativePath: relativePath)
             .eraseToAnyPublisher()
     }
 }

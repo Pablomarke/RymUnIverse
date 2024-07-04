@@ -24,6 +24,7 @@ final class DetailViewModel: ObservableObject {
     func getEpisodes() {
         for episode in model.episode {
             detailUseCase.getDetail(relativePath: episode)
+                .receive(on: DispatchQueue.main)
                 .sink { [weak self] completion in
                     if case let .failure(error) = completion {
                         self?.episodesModel = []

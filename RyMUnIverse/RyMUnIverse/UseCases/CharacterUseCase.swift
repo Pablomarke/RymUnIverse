@@ -15,7 +15,7 @@ protocol CharacterUseCase {
 struct CharacterUseCaseImpl: CharacterUseCase {
     private let characterRepository: CharacterListRepository
     
-    init(characterRepository: CharacterListRepository = CharacterListRepositoryImpl()) {
+    init(characterRepository: CharacterListRepository) {
         self.characterRepository = characterRepository
     }
     

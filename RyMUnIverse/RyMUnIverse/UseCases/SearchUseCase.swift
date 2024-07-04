@@ -15,7 +15,7 @@ protocol SearchUseCase {
 struct SearchUseCaseImpl: SearchUseCase {
     private let characterRepository: CharacterListRepository
     
-    init(characterRepository: CharacterListRepository = CharacterListRepositoryImpl()) {
+    init(characterRepository: CharacterListRepository) {
         self.characterRepository = characterRepository
     }
     
